@@ -1,0 +1,28 @@
+.d3{
+    width:100%;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 5rem;
+    text-align: center;
+  
+    background-color:grey;
+}
+@media (min-width: 1000px) {
+    header {
+      align-items: center;
+      flex-direction: row;
+    }
+    /* ...  */
+  }
+  .urCity, p{
+    font-size: 50px;
+    font-weight: 800;
+    font-style: white;
+    text-decoration-color: aliceblue;
+   
+  }
+  a {
+    color: black;
+    text-align: center justify;
+  }
+ 
