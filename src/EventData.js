@@ -29,25 +29,25 @@ export default function EventData({searchString}) {
       }, [searchString]);
 
     return (
-        <div>
-           <Carousel variant='light'> {    
+<div>
+  <Carousel variant='light'> {    
            results.length &&
-        
-            results.map((ele, i) => {
-                return (
-                  <Carousel.Item key={i} interval={3000}>
-              <div className="d3">
-                  <p className="urCity">{ele.city}</p>
-                  <p>{ele.title}</p>
-                  
-            
-              <a href={ele.links}  rel='noopener'>{ele.links}alt="404"</a>
-             {/* <ReactPlayer url={ele.link}/> */}
-              </div>
-              </Carousel.Item>
-        )})
-
+           results.map((ele, i) => {
+               return (
+         <Carousel.Item key={i} interval={3000}>
+             <div className="d3">
+                 <p className="urCity">{ele.city}</p>
+                 <p>{ele.title}</p>
+                 <a href={ele.links}  rel='noopener'>{ele.links}alt="404"</a>
+             </div>
+         </Carousel.Item>
+       )})
 } </Carousel> 
 
 </div>)
 }
+        
+
+                  
+            
+           
