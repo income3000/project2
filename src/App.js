@@ -22,7 +22,7 @@ export default function App() {
       <span><Link to='/PoliceK'>Victims</Link></span>
       <span><Link to='/Incidents'>Incidents</Link></span>
       
-      <img src="https://images-na.ssl-images-amazon.com/images/I/51m-2Z%2BGuOL._AC_SY450_.jpg" alt="pd"/>
+      <img src="https://www.blackagendareport.com/sites/default/files/2017-09/MORGAN_Police%20brutality845x400.jpg" alt="pd"/>
       
      
      
@@ -36,6 +36,7 @@ export default function App() {
         <Route path='/EventData' exact component={EventData}/>
         <Route path='/Incidents' exact component={Incidents}/>
        {/* <PoliceK /> */}
+       <modal />
     </div>
   );
 }

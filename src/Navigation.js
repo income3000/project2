@@ -4,11 +4,14 @@ import { LinkContainer } from 'react-router-bootstrap';
 import About from './About';
 import Incidents from './Incidents';
 // import EventData from './EventData';
-// import Form from './Form';
+import Form from './Form';
 const Navigation = ({ loggedIn, handleLogout, userInfo, }) => {
 	return (
 		<Navbar bg='light' expand='lg' collapseOnSelect={true}>
 			<Container >
+			<LinkContainer to='/Form' exact component={Form}>
+					<Navbar.Brand>Form</Navbar.Brand>
+				</LinkContainer>
 				<LinkContainer to='/Incidents.js' exact component={Incidents}>
 					<Navbar.Brand>Incidents</Navbar.Brand>
 				</LinkContainer>
