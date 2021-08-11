@@ -2,21 +2,24 @@ import React from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import About from './About';
+import Incidents from './Incidents';
+// import EventData from './EventData';
+// import Form from './Form';
 const Navigation = ({ loggedIn, handleLogout, userInfo, }) => {
 	return (
 		<Navbar bg='light' expand='lg' collapseOnSelect={true}>
 			<Container >
-				<LinkContainer to='/'>
-					<Navbar.Brand>Code Blue</Navbar.Brand>
+				<LinkContainer to='/Incidents.js' exact component={Incidents}>
+					<Navbar.Brand>Incidents</Navbar.Brand>
 				</LinkContainer>
 				<Navbar.Toggle aria-controls='basic-navbar-nav' />
 				<Navbar.Collapse id='basic-navbar-nav' className='justify-content-end'>
 					<Nav className='me-auto'>
-						<LinkContainer to='/'>
-							<Nav.Link>More Info</Nav.Link>
+						<LinkContainer to='/PoliceK'>
+							<Nav.Link >Fatalities</Nav.Link>
 						</LinkContainer>
-						<LinkContainer to='./About'>
-							<Nav.Link>About</Nav.Link>
+						<LinkContainer to='/About' exact component={About}>
+							<Nav.Link >About</Nav.Link>
 						</LinkContainer>
 					</Nav>
                     <Nav>

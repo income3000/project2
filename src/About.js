@@ -1,7 +1,7 @@
 './About.css'
 import React from 'react'
 import {Link} from "react-router-dom";
-
+import './About.css'
 export default function About() {
     return (
         <div className='about'>

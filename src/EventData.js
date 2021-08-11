@@ -3,8 +3,8 @@ import './EventData.css'
 import  {Carousel } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
 import ReactPlayer from 'react-player';
-
-export default function EventData({searchString}) {
+import Form from './Form';
+export default function EventData({searchString, setSearchString}) {
    
     const API_URL =
     "https://api.846policebrutality.com/api/incidents?&filter%5Bstate%5D=";
@@ -30,6 +30,8 @@ export default function EventData({searchString}) {
 
     return (
 <div>
+ 
+
   <Carousel variant='dark'> {    
            results.length &&
            results.map((ele, i) => {
@@ -37,9 +39,9 @@ export default function EventData({searchString}) {
          <Carousel.Item key={i} interval={5000}>
              <div className="d3">
                  <p className="urCity">{ele.city}</p>
-                 <p>{ele.title}</p>
-              <p>  <a href={ele.links[0]} alt="no video">{ele.links[0]}</a></p>
-                <a href={ele.links[1]} alt="no video">{ele.links[1]}</a>
+                 <p>👮‍♀️{ele.title}👮‍♂️</p>
+              <p> 👀 <a href={ele.links[0]} alt="no video">{ele.links[0]}</a>👀</p>
+                <h3>😩<a href={ele.links[1]} alt="no video">{ele.links[1]}</a>😩</h3>
            
              </div>
          </Carousel.Item>
