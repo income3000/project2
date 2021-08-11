@@ -7,7 +7,7 @@ import './App.css'
 import EventData from "./EventData";
 import {useState} from 'react'
 import About from "./About";
-
+import PoliceK from "./PoliceK";
 
 export default function App() {
   const [loggedIn, setloggedIn] = useState(localStorage.getItem('token') ? true : false)
@@ -17,15 +17,15 @@ export default function App() {
   return (
     <div className="App">
       <Navigation loggedIn={loggedIn}/>
-      <img src="http://sites.psu.edu/violenceinamerica/wp-content/uploads/sites/23512/2015/02/3.png" alt="pd"/>
-      <h1 id="codeblue">Code Blue</h1>
-      <Link to="/About">About Us</Link>
+      <img src="https://images-na.ssl-images-amazon.com/images/I/51m-2Z%2BGuOL._AC_SY450_.jpg" alt="pd"/>
+      
+     
      
   
         
          <Form searchString={searchString} setSearchString={setSearchString}/>
         <EventData searchString={searchString} setSearchString={setSearchString}/>
-       
+       <PoliceK />
     </div>
   );
 }

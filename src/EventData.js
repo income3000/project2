@@ -2,13 +2,13 @@ import React from 'react'
 import './EventData.css'
 import  {Carousel } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
-
+import ReactPlayer from 'react-player';
 
 export default function EventData({searchString}) {
    
     const API_URL =
     "https://api.846policebrutality.com/api/incidents?&filter%5Bstate%5D=";
-   
+    
     
     const [results, setResults] = useState([]);
     const getData = async () => {
@@ -30,15 +30,17 @@ export default function EventData({searchString}) {
 
     return (
 <div>
-  <Carousel variant='light'> {    
+  <Carousel variant='dark'> {    
            results.length &&
            results.map((ele, i) => {
                return (
-         <Carousel.Item key={i} interval={3000}>
+         <Carousel.Item key={i} interval={5000}>
              <div className="d3">
                  <p className="urCity">{ele.city}</p>
                  <p>{ele.title}</p>
-                 <a href={ele.links}  rel='noopener'>{ele.links}alt="404"</a>
+              <p>  <a href={ele.links[0]} alt="no video">{ele.links[0]}</a></p>
+                <a href={ele.links[1]} alt="no video">{ele.links[1]}</a>
+           
              </div>
          </Carousel.Item>
        )})
@@ -50,4 +52,4 @@ export default function EventData({searchString}) {
 
                   
             
-           
+   

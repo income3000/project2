@@ -5,7 +5,7 @@ import About from './About';
 const Navigation = ({ loggedIn, handleLogout, userInfo, }) => {
 	return (
 		<Navbar bg='light' expand='lg' collapseOnSelect={true}>
-			<Container>
+			<Container >
 				<LinkContainer to='/'>
 					<Navbar.Brand>Code Blue</Navbar.Brand>
 				</LinkContainer>
